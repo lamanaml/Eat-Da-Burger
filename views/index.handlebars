@@ -1,17 +1,60 @@
-<h1>Eat the burger</h1>
 
-<h2>Create a new Burger</h2>
-<form class="create-form">
-    <div class="form-group">
-        <label >Burgers</label>
-        <input type="text" id="burger" name="burger_name">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Eat the Burger</h5>
+    <img src="/assets/img/sonic-burger.jpg" width="100" class="card-img-top" alt="burger image">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+         <h4 >On the Menu</h4>    
+            {{#each burgers}}
+              {{#unless this.devoured}}
+              <div>
+                <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                  <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+                </form>
+              </div>
+              {{/unless}}
+            {{/each}}
           </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
+       
+          <div class="col-sm">
+            <h4 >No Longer Available</h4>
+            {{#each burgers}}
+              {{#if this.devoured}}
+                <div class='burgerEaten'>
+                  {{this.burger_name}}
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+      </div>
+    </div>
+    
+    .............................................................
+    <p class="card-text">
+      <div class="form-group">
+        <div>Add a new Burger to the menu!
+        </div>
+        <form action="/api/burgers" method="POST">
+          <input type="text" id="name" name="burger_name" >
+          <button type="submit" class="addBurgerButton">Add The Burger</button>
+        </form>
+         
+      </div>
+     
+    </p>
   </div>
+   
 
-  <button type="submit">Add Cat</button>
-</form>
+ 
+
+
+
+
+
+     
+
+  
+

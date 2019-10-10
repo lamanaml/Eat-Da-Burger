@@ -1,4 +1,30 @@
 var connection = require("../config/connection.js");
+// Import MySQL connection.
+
+
+// Helper function for generating MySQL syntax
+function printQuestionMarks(num) {
+	var arr = [];
+
+	for (var i = 0; i < num; i++) {
+		arr.push("?");
+	}
+
+	return arr.toString();
+}
+
+// Helper function for generating My SQL syntax
+function objToSql(ob) {
+	var arr = [];
+
+	for (var key in ob) {
+		arr.push(key + "=" + ob[key]);
+	}
+
+	return arr.toString();
+}
+
+
 
 var orm = {
   all: function(tableInput, cb) {
@@ -9,11 +35,10 @@ var orm = {
       }
       cb(result);
     });
-  };
+  },
 
-create: function(table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table ;
-
+newBurger: function(table, cols, vals, cb) {
+    var queryString = "INSERT INTO " + table;
     queryString += " (";
     queryString += cols.toString();
     queryString += ") ";
@@ -31,7 +56,6 @@ create: function(table, cols, vals, cb) {
       cb(result);
     });
   },
-
 // function insertOne() {
 
 // };

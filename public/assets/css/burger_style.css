@@ -1,0 +1,30 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+
+h1 {
+    font-family: verdana;
+}
+
+body {
+    font-family: verdana;
+ background-image: url("../img/burger_bg.jpg");
+ background-color: #cccccc;
+}
