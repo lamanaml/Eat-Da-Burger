@@ -28,3 +28,6 @@ body {
  background-image: url("../img/burger_bg.jpg");
  background-color: #cccccc;
 }
+.container {
+ visibility: .5;
+}

@@ -15,12 +15,21 @@ router.get("/", function(req, res) {
 }),
 
 router.post("/api/burgers", function(req, res) {
-  burger.newBurger([
-    "burger_name"
-  ], [
-    req.body.burger_name
-  ], function(result) {
-      res.json({ result });
+  burger.addBurger(
+    req.body.burger_name, 
+    function(result) {
+      res.redirect("/");
+      console.log(result)
+  });
+});
+
+router.put("/api/burgers/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  burger.updateBurger({
+    devoured: true
+  }, condition, function(data) {
+    res.redirect("/");
   });
 });
 

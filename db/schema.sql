@@ -4,6 +4,6 @@ USE burgers_db;
 CREATE TABLE burgers (
     id int auto_increment, 
     burger_name varchar,
-    devoured boolean,
+    devoured boolean default false,
     primary key (id)
     );
