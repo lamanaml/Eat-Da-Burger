@@ -16,11 +16,11 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.newBurger([
-    "burger_name", 
+    "burger_name"
   ], [
     req.body.burger_name
   ], function(result) {
-       res.render("results");
+      res.json({ result });
   });
 });
 
