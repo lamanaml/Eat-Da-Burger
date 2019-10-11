@@ -28,7 +28,7 @@ router.put("/api/burgers/:id", function(req, res) {
 
   burger.updateBurger({
     devoured: true
-  }, condition, function(data) {
+  }, condition, function() {
     res.redirect("/");
   });
 });

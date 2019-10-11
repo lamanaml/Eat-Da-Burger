@@ -10,14 +10,13 @@
         <div class="col-sm">
          <h4 >On the Menu</h4>    
             {{#each burgers}}
-             
-              {{this.burger_name}}
-              <div>
+             {{#unless devoured}}
+              <div>{{this.burger_name}}
                 <form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
                   <button type="submit" >Devour</button>
                 </form>
               </div>
-              
+              {{/unless}}
             {{/each}}
           </div>
        
@@ -25,7 +24,7 @@
             <h4 >No Longer Available</h4>
             {{#each burgers}}
               {{#if this.devoured}}
-                {{this.burger_name}}
+                <div>{{this.burger_name}}</div>
               {{/if}}
             {{/each}}
           </div>
