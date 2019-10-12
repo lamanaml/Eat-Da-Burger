@@ -5,6 +5,22 @@
     <h2 >Eat the Burger</h2>
     <img src="/assets/img/sonic-burger.jpg" width="50px" class="card-img-top" alt="burger image">
 
+ <p class="card-text">
+      <div class="form-group">
+        <div>Add a new Burger to the menu!
+        </div>
+        <form action="/api/burgers" method="POST">
+          <input type="text" id="name" name="burger_name" >
+          <button type="submit" >Add The Burger</button>
+        </form>
+         
+      </div>
+     
+   
+   
+______________________________________________
+
+
     <div class="container">
       <div class="row">
         <div class="col-sm">
@@ -12,8 +28,8 @@
             {{#each burgers}}
              {{#unless devoured}}
               <div>{{id}}-{{this.burger_name}}
-                
-                <button class="devour" data-id="{{this.id}}">Devour</button>
+                  <button type="btn" class="devoured btn btn-warning" data-id="{{id}}" > Devour </button>
+                 
 
 
 
@@ -34,21 +50,8 @@
       </div>
     </div>
     
-    .............................................................
-    <p class="card-text">
-      <div class="form-group">
-        <div>Add a new Burger to the menu!
-        </div>
-        <form action="/api/burgers" method="POST">
-          <input type="text" id="name" name="burger_name" >
-          <button type="submit" >Add The Burger</button>
-        </form>
-         
-      </div>
-     
     </p>
   </div>
   </div>
    
-
  

@@ -1,20 +1,31 @@
-
-
-  $(".devour").on("click", function(event) {
-      console.log("burgerjs")
+$(function() {
+    $(".devoured").on("click", function(event) {
         event.preventDefault();
-
         var id = $(this).data("id");
-        var devouredState = {
-            devoured: 1
+       
+
+        console.log(id, true);
+
+        var newBurgerState = {
+            id: id,
+            devoured: true
         };
 
-        // Send the PUT request.
+        console.log(newBurgerState);
+
+        // Send the PUT request
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            data: devouredState
-        }).then(function() {
-            console.log("Burger devoured");
-            location.reload();
-        });
+            data: newBurgerState
+        }).then(
+            function() {
+                console.log("changed devoured to", true);
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
     });
+
+  
+
+    

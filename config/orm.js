@@ -59,7 +59,7 @@ addBurger: function(table, cols, vals, cb) {
 },
 
 
-eatBurger: function(table, objColVals, condition, cb) {
+updateOne: function(table, objColVals, condition, cb) {
 	
 		var queryString = "UPDATE " + table;
 

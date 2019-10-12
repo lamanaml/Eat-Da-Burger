@@ -10,19 +10,18 @@ var burger = {
 //help from tutor to push burger with a default value
  addBurger: function(name, cb) {
 
-    orm.addBurger("burger", ["burger_name", "devoured"], [name, false], cb);
+    orm.addBurger("burger", ["burger_name"], [name], cb);
 
   },
 
 
 
 
-eatBurger: function(objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function(res) {
-      cb(res);
-    });
-  },
+ updateOne: function(objColVals, condition, cb) {
+        orm.updateOn("burger", objColVals, condition, function(res) {
+            cb(res);
+        });
+    },
 }
-
 
 module.exports = burger;

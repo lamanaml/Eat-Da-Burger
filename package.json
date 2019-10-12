@@ -23,6 +23,10 @@
     "mysql": "^2.17.1"
   },
   "devDependencies": {
-    "eslint": "^6.5.1"
+    "eslint": "^6.5.1",
+    "epress": "^0.0.1-security",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "routes": "^2.1.0"
   }
 }
