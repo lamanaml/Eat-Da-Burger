@@ -1,13 +1,16 @@
 # burger
 
-
+## Demo
  https://calm-retreat-96886.herokuapp.com/
 
+## Overview
  
-Eat-Da-Burger is a Node Espress Restaurant app that uses mySQl as the database, and uses handle bars to serve the page.  It lets users input the names of burgers they'd like to eat.
+Eat-Da-Burger is a Node Express app that uses mySQl as the database, and uses handlebars to serve the page.  This restaurant app lets users input the names of burgers they'd like to eat.
 
- Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
+Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
-* Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
+![alt text](public/assets/img/urgerScrnSht.png)
 
-* Your app will store every burger in a database, whether devoured or not.
+## Issues
+I could not get the devour button to change the state of the burger.  
+I could not get the app to deploy on Heroku
