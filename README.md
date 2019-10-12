@@ -15,13 +15,4 @@ Each burger in the waiting area also has a `Devour it!` button. When the user cl
 I could not get the devour button to change the state of the burger.  
 I could not get the app to deploy on Heroku
 
-=======
-
-Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
-
-![alt text](public/assets/img/urgerScrnSht.png)
-
-## Issues
-I could not get the devour button to change the state of the burger.  
-I could not get the app to deploy on Heroku
 
