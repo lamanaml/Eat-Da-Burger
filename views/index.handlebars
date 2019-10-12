@@ -1,10 +1,11 @@
 
 <div class="container">
-<div class="card"  style="width: 35rem;">
+<div class="card"  style="width: 50rem;">
   <div class="card-body">
-    <h2 >Eat the Burger</h2>
-    <img src="/assets/img/sonic-burger.jpg" width="50px" class="card-img-top" alt="burger image">
-
+  <div class="center">
+    <h1 >Eat the Burger</h1>
+    <img src="/assets/img/sonic-burger.jpg" style="width:300px" class="card-img-top"  alt="burger image">
+  </div>
  <p class="card-text">
       <div class="form-group">
         <div>Add a new Burger to the menu!
@@ -18,7 +19,7 @@
      
    
    
-______________________________________________
+_____________________________________________________________
 
 
     <div class="container">
@@ -27,8 +28,8 @@ ______________________________________________
          <h4 >On the Menu</h4>    
             {{#each burgers}}
              {{#unless devoured}}
-              <div>{{id}}-{{this.burger_name}}
-                  <button type="btn" class="devoured btn btn-warning" data-id="{{id}}" > Devour </button>
+              <div>
+                  <button type="btn" class="devoured btn btn-warning" data-id="{{id}}" > Devour </button> {{id}}-{{this.burger_name}}
                  
 
 

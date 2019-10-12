@@ -34,3 +34,11 @@ body {
   opacity: 0.8;
   float: right;
 }
+
+.card {
+  width: 300px;
+}
+
+.center {
+  text-align: center
+}
