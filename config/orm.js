@@ -59,7 +59,7 @@ addBurger: function(table, cols, vals, cb) {
 },
 
 
-updateBurger: function(table, objColVals, condition, cb) {
+eatBurger: function(table, objColVals, condition, cb) {
 	
 		var queryString = "UPDATE " + table;
 
@@ -72,7 +72,8 @@ updateBurger: function(table, objColVals, condition, cb) {
 			if (err) {
 				throw err;
 			}
-			cb(result);
+			cb(result); 
+      console.log(results)
 		});
 
 }

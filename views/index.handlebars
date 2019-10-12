@@ -2,8 +2,8 @@
 <div class="container">
 <div class="card"  style="width: 35rem;">
   <div class="card-body">
-    <h5 class="card-title">Eat the Burger</h5>
-    <img src="/assets/img/sonic-burger.jpg" width="100px" class="card-img-top" alt="burger image">
+    <h2 >Eat the Burger</h2>
+    <img src="/assets/img/sonic-burger.jpg" width="50px" class="card-img-top" alt="burger image">
 
     <div class="container">
       <div class="row">
@@ -11,10 +11,13 @@
          <h4 >On the Menu</h4>    
             {{#each burgers}}
              {{#unless devoured}}
-              <div>{{this.burger_name}}
-                <form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
-                  <button type="submit" >Devour</button>
-                </form>
+              <div>{{id}}-{{this.burger_name}}
+                
+                <button class="devour" data-id="{{this.id}}">Devour</button>
+
+
+
+ 
               </div>
               {{/unless}}
             {{/each}}
@@ -24,7 +27,7 @@
             <h4 >No Longer Available</h4>
             {{#each burgers}}
               {{#if this.devoured}}
-                <div>{{this.burger_name}}</div>
+                <div>{{this.id}} - {{this.burger_name}}</div>
               {{/if}}
             {{/each}}
           </div>
@@ -49,12 +52,3 @@
    
 
  
-
-
-
-
-
-     
-
-  
-
